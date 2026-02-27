@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test & Reflect — Keep Attendance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/logo.png" alt="Keep Attendance" class="logo-img">
+        <span class="nav-brand">Keep Attendance <span class="nav-brand-by">by Ensquared</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="background.html">Background</a></li>
+        <li><a href="ideate.html">Ideate</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="test.html" class="nav-active">Test & Reflect</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="#" class="nav-product-link">Our Product</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="page-hero-bg"></div>
+      <div class="container">
+        <div class="page-breadcrumb"><a href="index.html">Home</a> <span>/</span> Test &amp; Reflect</div>
+        <div class="page-hero-num">04</div>
+        <h1 class="page-hero-title">Test &amp; Reflect</h1>
+        <p class="page-hero-sub">How we validated the system, what we discovered, and what we'd do differently.</p>
+      </div>
+    </section>
+
+    <!-- TESTING OVERVIEW -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Testing Approach</h2>
+        <p class="section-intro">We tested Keep Attendance across multiple scenarios to evaluate accuracy, reliability, and ease of use.</p>
+        <div class="content-two-col">
+          <div class="content-col-text">
+            <p>Testing was conducted iteratively throughout the development process. We began with controlled single-person scenarios to establish a baseline for detection accuracy, then moved to more realistic multi-person and variable-lighting conditions.</p>
+            <p>Each test round was used to tune the model's confidence threshold, improve detection stability, and refine the web dashboard's real-time update behavior. Our goal was to ensure the system could operate reliably in a standard indoor environment without any special setup.</p>
+            <p>We also evaluated the deployment process itself — how quickly a new instance could be set up, how well the system handled network interruptions, and how intuitive the interface was for a first-time user.</p>
+          </div>
+          <div class="content-col-visual">
+            <div class="test-phase-stack">
+              <div class="test-phase">
+                <div class="test-phase-label">Phase 1</div>
+                <div class="test-phase-name">Controlled single-person detection</div>
+              </div>
+              <div class="test-phase">
+                <div class="test-phase-label">Phase 2</div>
+                <div class="test-phase-name">Variable lighting conditions</div>
+              </div>
+              <div class="test-phase">
+                <div class="test-phase-label">Phase 3</div>
+                <div class="test-phase-name">Multi-person and edge case scenarios</div>
+              </div>
+              <div class="test-phase">
+                <div class="test-phase-label">Phase 4</div>
+                <div class="test-phase-name">End-to-end deployment and usability</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT WORKED -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">What Worked</h2>
+        <div class="results-grid">
+          <div class="result-card result-success" data-aos="fade-up">
+            <div class="result-icon">✓</div>
+            <h3>Reliable detection in standard conditions</h3>
+            <p>Under consistent indoor lighting, the system accurately detected and logged presence with strong reliability.</p>
+          </div>
+          <div class="result-card result-success" data-aos="fade-up" data-aos-delay="100">
+            <div class="result-icon">✓</div>
+            <h3>Real-time dashboard updates</h3>
+            <p>Attendance records appeared in the web interface with minimal delay, making real-time monitoring practical.</p>
+          </div>
+          <div class="result-card result-success" data-aos="fade-up" data-aos-delay="150">
+            <div class="result-icon">✓</div>
+            <h3>Fast and simple deployment</h3>
+            <p>A fresh instance of the system could be set up and operational in minutes, validating the portability goal.</p>
+          </div>
+          <div class="result-card result-success" data-aos="fade-up" data-aos-delay="200">
+            <div class="result-icon">✓</div>
+            <h3>Browser-based accessibility</h3>
+            <p>The dashboard worked correctly across multiple devices and browsers without any installation required.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHALLENGES -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Challenges We Faced</h2>
+        <div class="challenges-list">
+          <div class="challenge-item" data-aos="fade-up">
+            <div class="challenge-num">01</div>
+            <div class="challenge-text">
+              <h3>Variable lighting conditions</h3>
+              <p>Detection accuracy dropped in low-light or high-contrast environments. Future iterations would benefit from preprocessing steps to normalize frame exposure before analysis.</p>
+            </div>
+          </div>
+          <div class="challenge-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="challenge-num">02</div>
+            <div class="challenge-text">
+              <h3>Confidence threshold tuning</h3>
+              <p>Finding the right balance between sensitivity and specificity required significant iteration. Too low a threshold generated false positives; too high missed valid detections.</p>
+            </div>
+          </div>
+          <div class="challenge-item" data-aos="fade-up" data-aos-delay="150">
+            <div class="challenge-num">03</div>
+            <div class="challenge-text">
+              <h3>Network latency on slower connections</h3>
+              <p>On networks with higher latency, the dashboard refresh rate lagged behind actual detections. Optimizing the event-streaming mechanism would improve this.</p>
+            </div>
+          </div>
+          <div class="challenge-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="challenge-num">04</div>
+            <div class="challenge-text">
+              <h3>Differentiating individuals</h3>
+              <p>The current system detects presence rather than identity. Tracking specific individuals would require facial recognition, which introduces additional complexity and privacy considerations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- METRICS PLACEHOLDER -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="placeholder-block">
+          <div class="placeholder-icon">📈</div>
+          <h2>Performance Metrics</h2>
+          <p class="placeholder-label">To Be Added</p>
+          <p>Quantitative performance data including detection accuracy rates, response times, false positive/negative rates, and comparison benchmarks will be published here.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- REFLECTIONS -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Reflections &amp; Next Steps</h2>
+        <p class="section-intro">What we learned and where we'd take this project next.</p>
+        <div class="reflection-grid">
+          <div class="reflection-card" data-aos="fade-up">
+            <h3>Improved lighting robustness</h3>
+            <p>Implementing adaptive exposure normalization would make the system reliable in a wider range of physical environments.</p>
+          </div>
+          <div class="reflection-card" data-aos="fade-up" data-aos-delay="100">
+            <h3>Individual identification</h3>
+            <p>Adding an opt-in facial recognition layer — with appropriate privacy controls — would enable named attendance records rather than presence-only detection.</p>
+          </div>
+          <div class="reflection-card" data-aos="fade-up" data-aos-delay="150">
+            <h3>Data export &amp; integrations</h3>
+            <p>Exporting attendance data to CSV, Google Sheets, or LMS platforms would dramatically increase the system's practical value.</p>
+          </div>
+          <div class="reflection-card" data-aos="fade-up" data-aos-delay="200">
+            <h3>Multi-camera support</h3>
+            <p>Scaling to multiple camera feeds simultaneously would allow coverage of larger spaces and more complex environments.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NAV FOOTER -->
+    <div class="page-nav-footer container">
+      <a href="design.html" class="page-nav-back">← Engineering Design</a>
+      <a href="team.html" class="page-nav-next">Meet the Team →</a>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content container">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Keep Attendance" class="footer-logo">
+      </div>
+      <p class="footer-tagline">Keep Attendance</p>
+      <div class="footer-info">
+        <p><strong>Contact</strong> — stochn27@goastudent.org · berkowitzn27@goastudent.org</p>
+        <p><strong>Competition</strong> — [Competition Name Placeholder]</p>
+      </div>
+      <p class="footer-copy">© Keep Attendance. Innovation. Efficiency. Reliability.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

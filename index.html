@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keep Attendance — AI-Powered Smart Attendance System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/logo.png" alt="Keep Attendance" class="logo-img">
+        <span class="nav-brand">Keep Attendance <span class="nav-brand-by">by Ensquared</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="background.html">Background</a></li>
+        <li><a href="ideate.html">Ideate</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="test.html">Test & Reflect</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="#" class="nav-product-link">Our Product</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <canvas class="hero-canvas" id="heroCanvas"></canvas>
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-orb hero-orb-3"></div>
+      <div class="hero-grid"></div>
+
+      <div class="hero-layout container">
+        <div class="hero-text">
+          <p class="hero-eyebrow">Keep Attendance</p>
+          <h1 class="hero-title">Reinventing Attendance<br>with AI</h1>
+          <p class="hero-slogan">Making teachers' lives easier.</p>
+          <p class="hero-subtitle">A real-time, AI-powered system that automatically detects and logs who is present — no manual sign-ins, no errors, just reliable visibility at a glance.</p>
+          <div class="hero-actions">
+            <a href="background.html" class="btn btn-primary">Explore the Project</a>
+            <a href="design.html" class="btn btn-outline">How It Works</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-img-wrap">
+            <div class="hero-img-placeholder">
+              <div class="hero-img-inner">
+                <svg viewBox="0 0 420 300" xmlns="http://www.w3.org/2000/svg" class="hero-svg">
+                  <!-- Camera lens ring -->
+                  <circle cx="210" cy="145" r="90" fill="none" stroke="rgba(12,52,157,0.12)" stroke-width="1.5" stroke-dasharray="6 4"/>
+                  <circle cx="210" cy="145" r="72" fill="none" stroke="rgba(12,52,157,0.18)" stroke-width="1"/>
+                  <circle cx="210" cy="145" r="56" fill="rgba(12,52,157,0.06)"/>
+                  <circle cx="210" cy="145" r="42" fill="rgba(12,52,157,0.09)"/>
+                  <!-- Lens center -->
+                  <circle cx="210" cy="145" r="28" fill="rgba(12,52,157,0.15)"/>
+                  <circle cx="210" cy="145" r="16" fill="rgba(12,52,157,0.25)"/>
+                  <!-- Scan corner brackets -->
+                  <path d="M100 60 L100 80 M100 60 L120 60" stroke="#0C349D" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+                  <path d="M320 60 L320 80 M320 60 L300 60" stroke="#0C349D" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+                  <path d="M100 230 L100 210 M100 230 L120 230" stroke="#0C349D" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+                  <path d="M320 230 L320 210 M320 230 L300 230" stroke="#0C349D" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+                  <!-- Scan line animated -->
+                  <line x1="115" y1="145" x2="305" y2="145" stroke="#97C1E6" stroke-width="1.5" opacity="0.6">
+                    <animateTransform attributeName="transform" type="translate" values="0 -60;0 60;0 -60" dur="3s" repeatCount="indefinite"/>
+                  </line>
+                  <!-- Data nodes -->
+                  <circle cx="355" cy="80" r="5" fill="#99C68E" opacity="0.8"/>
+                  <circle cx="375" cy="120" r="3.5" fill="#97C1E6" opacity="0.7"/>
+                  <circle cx="360" cy="195" r="4" fill="#0C349D" opacity="0.5"/>
+                  <circle cx="55" cy="100" r="4" fill="#97C1E6" opacity="0.7"/>
+                  <circle cx="70" cy="170" r="3" fill="#99C68E" opacity="0.6"/>
+                  <!-- Connecting lines -->
+                  <line x1="355" y1="80" x2="305" y2="120" stroke="#97C1E6" stroke-width="0.8" opacity="0.3"/>
+                  <line x1="375" y1="120" x2="305" y2="145" stroke="#97C1E6" stroke-width="0.8" opacity="0.3"/>
+                  <line x1="360" y1="195" x2="305" y2="170" stroke="#97C1E6" stroke-width="0.8" opacity="0.3"/>
+                  <!-- Check badge -->
+                  <circle cx="280" cy="200" r="18" fill="#99C68E"/>
+                  <path d="M272 200 L278 206 L288 195" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                  <!-- Dashboard preview bottom -->
+                  <rect x="130" y="255" width="160" height="28" rx="6" fill="white" stroke="rgba(12,52,157,0.12)" stroke-width="1"/>
+                  <circle cx="148" cy="269" r="6" fill="#99C68E"/>
+                  <rect x="162" y="264" width="60" height="4" rx="2" fill="rgba(12,52,157,0.2)"/>
+                  <rect x="162" y="272" width="40" height="3" rx="1.5" fill="rgba(12,52,157,0.1)"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll">
+        <span>Scroll to explore</span>
+        <div class="scroll-indicator"></div>
+      </div>
+    </section>
+
+    <!-- ===== ABSTRACT ===== -->
+    <section class="section abstract-section">
+      <div class="container">
+        <div class="abstract-card">
+          <div class="abstract-label">Abstract</div>
+          <h2>Abstract – Coming Soon</h2>
+          <p>A formal abstract summarizing the project's purpose, methodology, and findings will be published here. Keep Attendance is a student-developed AI-powered attendance system built to address real-world inefficiencies in manual tracking through computer vision and machine learning.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SOLUTION OVERVIEW ===== -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">The Solution</h2>
+        <p class="section-intro">Keep Attendance uses AI and computer vision to see who's present — automatically, accurately, and in real time.</p>
+        <div class="solution-content">
+          <div class="solution-list">
+            <div class="solution-item">
+              <span class="solution-check">✓</span>
+              <div><strong>AI-powered visual recognition</strong> — Analyzes live video to detect presence with high accuracy.</div>
+            </div>
+            <div class="solution-item">
+              <span class="solution-check">✓</span>
+              <div><strong>Automatic detection &amp; logging</strong> — No manual input. Presence is confirmed and timestamped in real time.</div>
+            </div>
+            <div class="solution-item">
+              <span class="solution-check">✓</span>
+              <div><strong>Simple web dashboard</strong> — View attendance, history, and live status from any browser on your network.</div>
+            </div>
+            <div class="solution-item">
+              <span class="solution-check">✓</span>
+              <div><strong>Portable &amp; easy to set up</strong> — Low-cost hardware, minimal configuration. Deploy anywhere in minutes.</div>
+            </div>
+          </div>
+          <div class="solution-visual">
+            <div class="solution-visual-inner">
+              <div class="mock-dashboard">
+                <div class="mock-header">
+                  <span class="mock-dot"></span>
+                  <span class="mock-dot"></span>
+                  <span class="mock-dot"></span>
+                  <span>Live Dashboard</span>
+                </div>
+                <div class="mock-content">
+                  <div class="mock-row"><span class="mock-check"></span> Present · 9:02 AM</div>
+                  <div class="mock-row"><span class="mock-check"></span> Present · 9:04 AM</div>
+                  <div class="mock-row"><span class="mock-check"></span> Present · 9:07 AM</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURES OVERVIEW ===== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Key Features</h2>
+        <div class="features-grid">
+          <div class="feature-card" data-aos="fade-up">
+            <div class="feature-icon">⏱️</div>
+            <h3>Real-Time Attendance Tracking</h3>
+            <p>See who's present right now. No delays, no guesswork.</p>
+          </div>
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="50">
+            <div class="feature-icon">🤖</div>
+            <h3>AI-Powered Visual Recognition</h3>
+            <p>Computer vision that learns and improves. Accurate, reliable detection.</p>
+          </div>
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-icon">📅</div>
+            <h3>Automated Logging with Timestamps</h3>
+            <p>Every check-in is recorded with exact time. Full audit trail when you need it.</p>
+          </div>
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="150">
+            <div class="feature-icon">🖥️</div>
+            <h3>Web-Based Monitoring Dashboard</h3>
+            <p>Access from any device on your network. Simple, clear, always available.</p>
+          </div>
+          <div class="feature-card feature-card-wide" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-icon">⚙️</div>
+            <h3>Customizable Detection Capabilities</h3>
+            <p>Optional visual attribute detection showcases the system's flexible AI — tuned to your specific environment and needs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== INNOVATION ===== -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Innovation &amp; Impact</h2>
+        <p class="section-intro">Built for accessibility, scalability, and real-world deployment.</p>
+        <div class="innovation-grid">
+          <div class="innovation-card" data-aos="fade-up">
+            <h3>Low-cost hardware</h3>
+            <p>Works with affordable network cameras and standard computers. No expensive enterprise setup.</p>
+          </div>
+          <div class="innovation-card" data-aos="fade-up" data-aos-delay="100">
+            <h3>Accessible</h3>
+            <p>Browser-based. No special apps or installations. Access from phones, tablets, or laptops.</p>
+          </div>
+          <div class="innovation-card" data-aos="fade-up" data-aos-delay="200">
+            <h3>Scalable</h3>
+            <p>Add more cameras or spaces as you grow. Architecture designed for expansion.</p>
+          </div>
+          <div class="innovation-card" data-aos="fade-up" data-aos-delay="300">
+            <h3>Future-ready</h3>
+            <p>Custom AI models, new detection capabilities, and integrations — built with extensibility in mind.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EXPLORE PAGES ===== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Explore the Project</h2>
+        <p class="section-intro">Follow our full engineering journey — from identifying the problem to building and testing the solution.</p>
+        <div class="pages-grid">
+          <a href="background.html" class="page-card" data-aos="fade-up">
+            <div class="page-card-num">01</div>
+            <h3>Background &amp; Problem</h3>
+            <p>Research, problem definition, and why attendance tracking needed to be reinvented.</p>
+            <span class="page-card-arrow">→</span>
+          </a>
+          <a href="ideate.html" class="page-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="page-card-num">02</div>
+            <h3>Ideate Solution</h3>
+            <p>Our brainstorming process, concept development, and design thinking approach.</p>
+            <span class="page-card-arrow">→</span>
+          </a>
+          <a href="design.html" class="page-card" data-aos="fade-up" data-aos-delay="150">
+            <div class="page-card-num">03</div>
+            <h3>Engineering Design</h3>
+            <p>The final system architecture: camera, AI pipeline, and web dashboard.</p>
+            <span class="page-card-arrow">→</span>
+          </a>
+          <a href="test.html" class="page-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="page-card-num">04</div>
+            <h3>Test &amp; Reflect</h3>
+            <p>How we tested the system, what worked, and what we learned along the way.</p>
+            <span class="page-card-arrow">→</span>
+          </a>
+          <a href="team.html" class="page-card" data-aos="fade-up" data-aos-delay="250">
+            <div class="page-card-num">05</div>
+            <h3>The Team</h3>
+            <p>Meet the co-founders behind Keep Attendance.</p>
+            <span class="page-card-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-content container">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Keep Attendance" class="footer-logo">
+      </div>
+      <p class="footer-tagline">Keep Attendance</p>
+      <div class="footer-info">
+        <p><strong>Contact</strong> — stochn27@goastudent.org · berkowitzn27@goastudent.org</p>
+        <p><strong>Competition</strong> — [Competition Name Placeholder]</p>
+      </div>
+      <p class="footer-copy">© Keep Attendance. Innovation. Efficiency. Reliability.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

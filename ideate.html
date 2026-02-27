@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ideate Solution — Keep Attendance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/logo.png" alt="Keep Attendance" class="logo-img">
+        <span class="nav-brand">Keep Attendance <span class="nav-brand-by">by Ensquared</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="background.html">Background</a></li>
+        <li><a href="ideate.html" class="nav-active">Ideate</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="test.html">Test & Reflect</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="#" class="nav-product-link">Our Product</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="page-hero-bg"></div>
+      <div class="container">
+        <div class="page-breadcrumb"><a href="index.html">Home</a> <span>/</span> Ideate</div>
+        <div class="page-hero-num">02</div>
+        <h1 class="page-hero-title">Ideate Solution</h1>
+        <p class="page-hero-sub">From problem to concept — how we developed the idea for Keep Attendance.</p>
+      </div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="section">
+      <div class="container">
+        <div class="content-two-col">
+          <div class="content-col-text">
+            <h2 class="section-title-left">The Ideation Process</h2>
+            <p>With a clear problem in hand, we began exploring how technology could fundamentally change the way attendance is tracked. Rather than digitizing the same manual process, we asked: what would it look like if attendance happened passively — without any human action required?</p>
+            <p>This question led us toward computer vision and machine learning. If a camera could reliably detect whether a person is present in a space, attendance could become a background process — always running, always accurate, always available.</p>
+            <p>We evaluated several approaches before converging on an architecture that was low-cost, portable, and accessible — qualities that would make the system viable beyond the prototype stage.</p>
+          </div>
+          <div class="content-col-visual">
+            <div class="ideate-map">
+              <svg class="ideate-map-svg" viewBox="0 0 260 260" xmlns="http://www.w3.org/2000/svg">
+                <!-- connecting lines from center to each node -->
+                <line x1="130" y1="130" x2="130" y2="44"  stroke="rgba(12,52,157,0.18)" stroke-width="1.5" stroke-dasharray="5 4"/>
+                <line x1="130" y1="130" x2="216" y2="130" stroke="rgba(12,52,157,0.18)" stroke-width="1.5" stroke-dasharray="5 4"/>
+                <line x1="130" y1="130" x2="130" y2="216" stroke="rgba(12,52,157,0.18)" stroke-width="1.5" stroke-dasharray="5 4"/>
+                <line x1="130" y1="130" x2="44"  y2="130" stroke="rgba(12,52,157,0.18)" stroke-width="1.5" stroke-dasharray="5 4"/>
+
+                <!-- center node -->
+                <circle cx="130" cy="130" r="36" fill="#0C349D"/>
+                <text x="130" y="126" text-anchor="middle" font-family="'Frank Ruhl Libre',serif" font-size="11" font-weight="700" fill="white">AI</text>
+                <text x="130" y="140" text-anchor="middle" font-family="'Frank Ruhl Libre',serif" font-size="11" font-weight="700" fill="white">Vision</text>
+
+                <!-- top: Camera Feed -->
+                <rect x="88" y="8" width="84" height="32" rx="16" fill="white" stroke="#97C1E6" stroke-width="1.5"/>
+                <text x="130" y="29" text-anchor="middle" font-family="'Frank Ruhl Libre',serif" font-size="11" font-weight="600" fill="#0C349D">Camera Feed</text>
+
+                <!-- right: ML Detection -->
+                <rect x="220" y="114" width="34" height="32" rx="16" fill="white" stroke="#97C1E6" stroke-width="1.5"/>
+                <text x="237" y="126" text-anchor="middle" font-family="'Frank Ruhl Libre',serif" font-size="9.5" font-weight="600" fill="#0C349D">ML</text>
+                <text x="237" y="138" text-anchor="middle" font-family="'Frank Ruhl Libre',serif" font-size="9.5" font-weight="600" fill="#0C349D">Detect</text>
+
+                <!-- bottom: Dashboard -->
+                <rect x="82" y="220" width="96" height="32" rx="16" fill="white" stroke="#97C1E6" stroke-width="1.5"/>
+                <text x="130" y="241" text-anchor="middle" font-family="'Frank Ruhl Libre',serif" font-size="11" font-weight="600" fill="#0C349D">Dashboard</text>
+
+                <!-- left: Auto-Log -->
+                <rect x="6" y="114" width="76" height="32" rx="16" fill="white" stroke="#97C1E6" stroke-width="1.5"/>
+                <text x="44" y="135" text-anchor="middle" font-family="'Frank Ruhl Libre',serif" font-size="11" font-weight="600" fill="#0C349D">Auto-Log</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONCEPT DIAGRAM PLACEHOLDER -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="placeholder-block">
+          <div class="placeholder-icon">📐</div>
+          <h2>Concept Diagram</h2>
+          <p class="placeholder-label">Placeholder</p>
+          <p>A detailed concept diagram showing our ideation map, design thinking flow, and the evolution of ideas from initial brainstorm to final concept will be placed here.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPROACH OPTIONS -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Approaches We Considered</h2>
+        <p class="section-intro">We evaluated multiple solutions before choosing the AI vision approach.</p>
+        <div class="approach-grid">
+          <div class="approach-card approach-rejected" data-aos="fade-up">
+            <div class="approach-badge">Considered</div>
+            <h3>QR Code Check-In</h3>
+            <p>Students scan a QR code to log attendance. Simple to implement but still requires manual action and is easy to game.</p>
+          </div>
+          <div class="approach-card approach-rejected" data-aos="fade-up" data-aos-delay="100">
+            <div class="approach-badge">Considered</div>
+            <h3>RFID / NFC Tags</h3>
+            <p>Hardware tags detect presence automatically. Higher cost, requires physical infrastructure, and isn't easily portable.</p>
+          </div>
+          <div class="approach-card approach-rejected" data-aos="fade-up" data-aos-delay="150">
+            <div class="approach-badge">Considered</div>
+            <h3>Mobile App Check-In</h3>
+            <p>App-based self-reporting. Still manual, relies on devices being present, and doesn't provide passive verification.</p>
+          </div>
+          <div class="approach-card approach-chosen" data-aos="fade-up" data-aos-delay="200">
+            <div class="approach-badge approach-badge-chosen">Chosen</div>
+            <h3>AI Computer Vision</h3>
+            <p>A network camera + machine learning model detects presence passively. No user action required. Portable, low-cost, and fully automated.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESIGN THINKING -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Design Thinking Framework</h2>
+        <p class="section-intro">We followed a structured design thinking process from empathy to prototype.</p>
+        <div class="dt-steps">
+          <div class="dt-step" data-aos="fade-up">
+            <div class="dt-num">1</div>
+            <h3>Empathize</h3>
+            <p>Identified the real pain points of manual attendance from an educator and administrator perspective.</p>
+          </div>
+          <div class="dt-step" data-aos="fade-up" data-aos-delay="100">
+            <div class="dt-num">2</div>
+            <h3>Define</h3>
+            <p>Narrowed the problem statement: automated, passive, reliable attendance for any space with a camera.</p>
+          </div>
+          <div class="dt-step" data-aos="fade-up" data-aos-delay="150">
+            <div class="dt-num">3</div>
+            <h3>Ideate</h3>
+            <p>Generated multiple solution concepts and evaluated each against cost, reliability, and accessibility criteria.</p>
+          </div>
+          <div class="dt-step" data-aos="fade-up" data-aos-delay="200">
+            <div class="dt-num">4</div>
+            <h3>Prototype</h3>
+            <p>Built an initial working system with a network camera, a Python ML backend, and a simple web dashboard.</p>
+          </div>
+          <div class="dt-step" data-aos="fade-up" data-aos-delay="250">
+            <div class="dt-num">5</div>
+            <h3>Test</h3>
+            <p>Ran the system in real environments, measured detection accuracy, and iterated on the model and UI.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NAV FOOTER -->
+    <div class="page-nav-footer container">
+      <a href="background.html" class="page-nav-back">← Background</a>
+      <a href="design.html" class="page-nav-next">Engineering Design →</a>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content container">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Keep Attendance" class="footer-logo">
+      </div>
+      <p class="footer-tagline">Keep Attendance</p>
+      <div class="footer-info">
+        <p><strong>Contact</strong> — stochn27@goastudent.org · berkowitzn27@goastudent.org</p>
+        <p><strong>Competition</strong> — [Competition Name Placeholder]</p>
+      </div>
+      <p class="footer-copy">© Keep Attendance. Innovation. Efficiency. Reliability.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

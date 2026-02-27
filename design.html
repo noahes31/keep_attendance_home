@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineering Design — Keep Attendance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/logo.png" alt="Keep Attendance" class="logo-img">
+        <span class="nav-brand">Keep Attendance <span class="nav-brand-by">by Ensquared</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="background.html">Background</a></li>
+        <li><a href="ideate.html">Ideate</a></li>
+        <li><a href="design.html" class="nav-active">Design</a></li>
+        <li><a href="test.html">Test & Reflect</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="#" class="nav-product-link">Our Product</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="page-hero-bg"></div>
+      <div class="container">
+        <div class="page-breadcrumb"><a href="index.html">Home</a> <span>/</span> Design</div>
+        <div class="page-hero-num">03</div>
+        <h1 class="page-hero-title">Final Engineering Design</h1>
+        <p class="page-hero-sub">The architecture, components, and system flow behind Keep Attendance.</p>
+      </div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">System Overview</h2>
+        <p class="section-intro">Keep Attendance is built on three tightly integrated components — camera hardware, an AI analysis pipeline, and a web interface.</p>
+        <div class="content-two-col">
+          <div class="content-col-text">
+            <p>The system uses a standard network camera as its input device, requiring no specialized hardware. The camera streams live video to a local processing server running a machine learning model trained to detect and verify human presence.</p>
+            <p>When presence is confirmed above a confidence threshold, the system creates a timestamped attendance record and makes it immediately available through a lightweight web dashboard. All processing happens locally — no cloud dependency, no latency, and no data leaving the premises.</p>
+            <p>The web interface is accessible from any browser on the same local network, making it easy for administrators to monitor attendance in real time without installing any software.</p>
+          </div>
+          <div class="content-col-visual">
+            <div class="system-spec-list">
+              <div class="spec-row"><span class="spec-key">Input</span><span class="spec-val">Network camera (IP/USB)</span></div>
+              <div class="spec-row"><span class="spec-key">Backend</span><span class="spec-val">Python · ML model · local server</span></div>
+              <div class="spec-row"><span class="spec-key">Output</span><span class="spec-val">Timestamped attendance log</span></div>
+              <div class="spec-row"><span class="spec-key">Interface</span><span class="spec-val">Browser-based web dashboard</span></div>
+              <div class="spec-row"><span class="spec-key">Network</span><span class="spec-val">Local network — no cloud required</span></div>
+              <div class="spec-row"><span class="spec-key">Hardware cost</span><span class="spec-val">Low — standard consumer devices</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SYSTEM FLOW -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">System Flow</h2>
+        <p class="section-intro">Three steps from live video to confirmed attendance record.</p>
+        <div class="flow-diagram">
+          <div class="flow-step" data-aos="fade-up">
+            <div class="flow-icon">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="18" stroke="#0C349D" stroke-width="1.5"/>
+                <circle cx="20" cy="20" r="9" fill="rgba(12,52,157,0.12)" stroke="#0C349D" stroke-width="1"/>
+                <circle cx="20" cy="20" r="4" fill="#0C349D"/>
+              </svg>
+            </div>
+            <div class="flow-step-num">1</div>
+            <h3>Camera Streams Live Video</h3>
+            <p>A network camera continuously captures the monitored space and feeds frames to the local processing server.</p>
+          </div>
+          <div class="flow-connector">
+            <div class="flow-line"></div>
+            <div class="flow-arrow">→</div>
+          </div>
+          <div class="flow-step" data-aos="fade-up" data-aos-delay="150">
+            <div class="flow-icon">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="8" width="32" height="24" rx="4" stroke="#0C349D" stroke-width="1.5"/>
+                <line x1="12" y1="16" x2="28" y2="16" stroke="#97C1E6" stroke-width="1.5"/>
+                <line x1="12" y1="20" x2="24" y2="20" stroke="#97C1E6" stroke-width="1.5"/>
+                <line x1="12" y1="24" x2="20" y2="24" stroke="#99C68E" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="flow-step-num">2</div>
+            <h3>AI Analyzes in Real Time</h3>
+            <p>The machine learning model processes each frame to detect and verify presence with high confidence before registering attendance.</p>
+          </div>
+          <div class="flow-connector">
+            <div class="flow-line"></div>
+            <div class="flow-arrow">→</div>
+          </div>
+          <div class="flow-step" data-aos="fade-up" data-aos-delay="300">
+            <div class="flow-icon">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="14" fill="rgba(153,198,142,0.2)" stroke="#99C68E" stroke-width="1.5"/>
+                <path d="M13 20 L18 25 L27 14" stroke="#99C68E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="flow-step-num">3</div>
+            <h3>Attendance Logged Automatically</h3>
+            <p>A timestamped record is created and immediately visible in the web dashboard — no human action required.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DASHBOARD MOCKUP PLACEHOLDER -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Web Dashboard</h2>
+        <p class="section-intro">A clean, minimal interface gives administrators real-time attendance visibility.</p>
+        <div class="dashboard-showcase">
+          <div class="placeholder-block dashboard-placeholder">
+            <div class="placeholder-icon">🖥️</div>
+            <h2>Live Dashboard Screenshot</h2>
+            <p class="placeholder-label">Placeholder</p>
+            <p>A screenshot or live demo of the web dashboard showing real-time attendance records, timestamps, and status indicators will be placed here.</p>
+          </div>
+          <div class="dashboard-preview-card">
+            <div class="mock-dashboard mock-dashboard-lg">
+              <div class="mock-header">
+                <span class="mock-dot"></span>
+                <span class="mock-dot"></span>
+                <span class="mock-dot"></span>
+                <span>Keep Attendance — Live View</span>
+              </div>
+              <div class="mock-content">
+                <div class="mock-toolbar">
+                  <span class="mock-badge mock-badge-live">● Live</span>
+                  <span class="mock-date">Today, 9:00 AM</span>
+                </div>
+                <div class="mock-row"><span class="mock-check"></span><span class="mock-name">Person detected</span><span class="mock-time">9:02 AM</span></div>
+                <div class="mock-row"><span class="mock-check"></span><span class="mock-name">Person detected</span><span class="mock-time">9:04 AM</span></div>
+                <div class="mock-row"><span class="mock-check"></span><span class="mock-name">Person detected</span><span class="mock-time">9:07 AM</span></div>
+                <div class="mock-row mock-row-pending"><span class="mock-check mock-check-pending"></span><span class="mock-name">Awaiting detection…</span><span class="mock-time">—</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CUSTOMIZATION -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Customizable Detection</h2>
+        <p class="section-intro">The system's AI layer can be extended to detect specific visual attributes.</p>
+        <div class="custom-grid">
+          <div class="custom-card" data-aos="fade-up">
+            <div class="feature-icon">🎯</div>
+            <h3>Attribute Detection</h3>
+            <p>Beyond presence, the AI model can be trained to recognize specific visual characteristics relevant to a given environment.</p>
+          </div>
+          <div class="custom-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-icon">🧩</div>
+            <h3>Modular Architecture</h3>
+            <p>Detection capabilities are modular — new tasks can be added without rebuilding the core system.</p>
+          </div>
+          <div class="custom-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-icon">🔒</div>
+            <h3>Privacy-First</h3>
+            <p>All processing is local. No video data is sent to external servers. The system is designed with privacy in mind.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NAV FOOTER -->
+    <div class="page-nav-footer container">
+      <a href="ideate.html" class="page-nav-back">← Ideate Solution</a>
+      <a href="test.html" class="page-nav-next">Test & Reflect →</a>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content container">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Keep Attendance" class="footer-logo">
+      </div>
+      <p class="footer-tagline">Keep Attendance</p>
+      <div class="footer-info">
+        <p><strong>Contact</strong> — stochn27@goastudent.org · berkowitzn27@goastudent.org</p>
+        <p><strong>Competition</strong> — [Competition Name Placeholder]</p>
+      </div>
+      <p class="footer-copy">© Keep Attendance. Innovation. Efficiency. Reliability.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
